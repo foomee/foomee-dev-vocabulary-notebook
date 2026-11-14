@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プログラミング頻出英単語・略語・専門用語の単語帳</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+  <div class="app-shell">
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">プログラミング頻出英単語帳</h1>
+        <p class="intro-text">プログラミングで出会う言葉を、少しずつ自分のものに。</p>
+      </section>
+
+      <section class="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="overview-title">学習状況</h2>
+          </div>
+          <span class="total-label">タグ別の登録数</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" class="tag-heading">タグ</th>
+                <th scope="col"><span class="status-label">学習済</span></th>
+                <th scope="col"><span class="status-label star">★</span></th>
+                <th scope="col"><span class="status-label blue">●</span></th>
+                <th scope="col"><span class="status-label yellow">●</span></th>
+                <th scope="col"><span class="status-label red">●</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">HTML</th>
+                <td>2</td><td>1</td><td>3</td><td>0</td><td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">CSS</th>
+                <td>5</td><td>4</td><td>2</td><td>1</td><td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">JavaScript</th>
+                <td>8</td><td>7</td><td>3</td><td>2</td><td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">共通・専門用語</th>
+                <td>11</td><td>10</td><td>4</td><td>3</td><td>2</td>
+              </tr>
+              <tr class="all-row">
+                <th scope="row">ALL <span class="all-caption">すべてのタグ</span></th>
+                <td>26</td><td>22</td><td>12</td><td>6</td><td>4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">※ 数字はレイアウト確認用のサンプルです。</p>
+      </section>
+
+      <nav class="actions">
+        <button class="add-button" type="button">
+          <span class="button-icon">＋</span>
+          <span>カードを追加</span>
+        </button>
+        <button class="list-button" type="button">
+          <span class="button-icon list-icon">≡</span>
+          <span>一覧を見る</span>
+        </button>
+      </nav>
+    </main>
+
+  </div>
 </body>
 </html>

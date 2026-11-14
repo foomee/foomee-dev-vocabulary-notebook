@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+:root {
+  color-scheme: dark;
+  --ink: #ffffff;
+  --muted: #71838d;
+  --line: #dce6ea;
+  --paper: #1b1d38;
+  --canvas: #16162c;
+  --blue: #398bd6;
+  --yellow: #e7b638;
+  --red: #df6262;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(100% - 40px, 920px);
+  margin: 36px auto;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid #e1e9ed;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgb(23 52 67 / 8%);
+}
+
+main {
+  padding: 42px 48px 38px;
+}
+
+.intro {
+  margin-bottom: 38px;
+}
+
+h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(22px, 3.3vw, 31px);
+  line-height: 1.45;
+  letter-spacing: .015em;
+}
+
+.intro-text {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 19px;
+}
+
+.total-label {
+  padding-bottom: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  height: 47px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  font-size: 14px;
+}
+
+thead th {
+  height: 43px;
+  background: #161f2c;
+  color: #526b77;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+th:first-child {
+  width: 42%;
+  text-align: left;
+}
+
+thead th:first-child {
+  padding-left: 17px;
+}
+
+tbody {
+    background-color: #1e2f40;
+}
+
+tbody th {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+tbody td {
+  color: var(--ink);
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+tbody tr:hover {
+  background: #294d68;
+}
+
+.status-label {
+  display: inline-block;
+  color: #23856f;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.status-label.star {
+  color: #d69b22;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.status-label.blue { color: var(--blue); }
+.status-label.yellow { color: var(--yellow); }
+.status-label.red { color: var(--red); }
+
+.all-row {
+  background: #161f2c;
+}
+
+.all-row th,
+.all-row td {
+  font-weight: 800;
+}
+
+.all-caption {
+  margin-left: 8px;
+  color: #91a0a8;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.table-note {
+  margin: 9px 2px 0;
+  color: #9aa8ae;
+  font-size: 10px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+button {
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.add-button {
+  background: #fff;
+  color: var(--paper);
+}
+
+.add-button:hover {
+  background: #294d68;
+  color: #fff;
+}
+
+.list-button {
+  background: var(--paper);
+  color: #ffffff;
+}
+
+.list-button:hover {
+  background: #294d68;
+}
+
+.button-icon {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.list-icon {
+  font-size: 23px;
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  main {
+    padding: 32px 18px 28px;
+  }
+
+  .intro {
+    margin-bottom: 30px;
+  }
+
+  .intro-text {
+    font-size: 12px;
+  }
+
+  .section-heading {
+    align-items: start;
+  }
+
+  .total-label {
+    padding-top: 20px;
+    font-size: 10px;
+  }
+
+  .actions {
+    gap: 9px;
+  }
+
+  button {
+    min-height: 50px;
+    gap: 6px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
